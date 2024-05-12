@@ -1,0 +1,43 @@
+/* Mobile: 375px
+Desktop: 1440px */
+/* css reset custom */
+:root {
+  /* primary colors */
+  --red-color: hsl(0, 78%, 62%);
+  --cyan-color: hsl(180, 62%, 55%);
+  --orange-color: hsl(34, 97%, 64%);
+  --blue-color: hsl(212, 86%, 64%);
+  --primary-color-1: var(var(--red-color));
+  --primary-color-2: var(var(--cyan-color));
+  /* neutral colors */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  /* Typography */
+  /* TODO!: import font  */
+  --primary-font-1: poppins, sans-serif;
+  /* font-weights:  200, 400, 600
+*/
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: var(--primary-font-1), sans-serif;
+  font-size: 15px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+
+/* overall classes */
+.bold-200 {
+  font-weight: 200;
+}

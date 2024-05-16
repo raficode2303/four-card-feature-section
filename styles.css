@@ -7,7 +7,7 @@ Desktop: 1440px */
   --cyan-color: hsl(180, 62%, 55%);
   --orange-color: hsl(34, 97%, 64%);
   --blue-color: hsl(212, 86%, 64%);
-  --primary-color-1: var(var(--red-color));
+  --white-color: hsl(0, 0%, 100%);
   --primary-color-2: var(var(--cyan-color));
   /* neutral colors */
   --very-dark-blue: hsl(234, 12%, 34%);
@@ -27,6 +27,7 @@ body {
   line-height: 1.5;
   font-family: var(--primary-font-1), sans-serif;
   font-size: 15px;
+  background-color: var(--very-light-gray);
 }
 img {
   display: block;
@@ -37,7 +38,70 @@ a {
   text-decoration: none;
 }
 
-/* overall classes */
+/* common classes */
+.flex {
+  display: flex;
+}
 .bold-200 {
   font-weight: 200;
+}
+.bold-400 {
+  font-weight: 200;
+}
+.bold-600 {
+  font-weight: 200;
+}
+
+/* ===classes === */
+body {
+}
+/* app */
+.app {
+  max-width: 75vw;
+  margin: auto;
+  padding: 2rem;
+  border: solid red;
+}
+.heading {
+  text-align: center;
+}
+/* header */
+.header {
+}
+
+/* main */
+.main {
+  /* TODO: HOW TO MAKE FLEX ITEMS EQUAL WIDTH? */
+  display: grid;
+  /* grid-auto-flow: column;
+  grid-auto-columns: 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  gap: 1rem;
+  /* justify-content: center; */
+}
+
+main > * {
+}
+
+.tow-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* flex: 1; */
+  padding: 2rem;
+  border-style: solid;
+  border-radius: 1rem;
+  box-shadow: 0px 4px var(--very-dark-blue);
+}
+.subject-icon {
+  align-self: flex-end;
+  width: 100px;
 }

@@ -64,13 +64,14 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - What challenges did you encounter, and how did you overcome them?
 
+* HOW TO MAKE FLEX ITEMS EQUAL WIDTH?
+
 - What specific areas of your project would you like help with?
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+- FireFox’s DevTools advantages
+- to maneuver between flex and grid
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
@@ -115,6 +116,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Kevin Powell
+[Equal Columns With Flexbox: It’s More Complicated Than You Might Think](https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/#top-of-site)
+
+- explain why `flex: 1` causes a problem in cases where you have borders or padding on some of your elements, and how to solve it.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

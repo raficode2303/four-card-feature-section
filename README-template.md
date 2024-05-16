@@ -61,7 +61,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Solution retrospective
 
 - What are you most proud of, and what would you do differently next time?
-
+  to solve the challenge without using `@media`, next time i try to make the cards carousel.
 - What challenges did you encounter, and how did you overcome them?
 
 * HOW TO MAKE FLEX ITEMS EQUAL WIDTH?

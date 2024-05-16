@@ -1,6 +1,15 @@
 /* Mobile: 375px
 Desktop: 1440px */
+/* === import fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* css reset custom */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 :root {
   /* primary colors */
   --red-color: hsl(0, 78%, 62%);
@@ -8,26 +17,23 @@ Desktop: 1440px */
   --orange-color: hsl(34, 97%, 64%);
   --blue-color: hsl(212, 86%, 64%);
   --white-color: hsl(0, 0%, 100%);
-  --primary-color-2: var(var(--cyan-color));
   /* neutral colors */
   --very-dark-blue: hsl(234, 12%, 34%);
   --grayish-blue: hsl(229, 6%, 66%);
   --very-light-gray: hsl(0, 0%, 98%);
-  /* Typography */
-  /* TODO!: import font  */
-  --primary-font-1: poppins, sans-serif;
-  /* font-weights:  200, 400, 600
-*/
+  /* Typography, font-weights:  200, 400, 600* */
+  --font-primary-1: 'Poppins', sans-serif;
+  /* others */
+  --gap-flex: 2rem;
 }
 
 body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   line-height: 1.5;
-  font-family: var(--primary-font-1), sans-serif;
+  font-family: var(--font-primary-1), sans-serif;
+  font-weight: 400;
   font-size: 15px;
   background-color: var(--very-light-gray);
+  color: var(--very-dark-blue, black);
 }
 img {
   display: block;
@@ -46,62 +52,85 @@ a {
   font-weight: 200;
 }
 .bold-400 {
-  font-weight: 200;
+  font-weight: 400;
 }
 .bold-600 {
-  font-weight: 200;
+  font-weight: 600;
 }
 
 /* ===classes === */
-body {
-}
-/* app */
+
+/* = app=  */
 .app {
   max-width: 75vw;
   margin: auto;
-  padding: 2rem;
-  border: solid red;
+  padding-block: 4rem;
 }
-.heading {
+/* == header ==  */
+.info-text,
+.subject-text {
+  color: var(--grayish-blue, gray);
+}
+.heading,
+.info-text {
+  max-width: 550px;
+  margin: auto;
   text-align: center;
 }
-/* header */
-.header {
+.heading {
+  text-wrap: balance;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  margin-bottom: 1rem;
+}
+.info-text {
+  font-size: 0.95rem;
+  margin-bottom: 4rem;
 }
 
-/* main */
+/* == main == */
 .main {
-  /* TODO: HOW TO MAKE FLEX ITEMS EQUAL WIDTH? */
   display: grid;
   /* grid-auto-flow: column;
   grid-auto-columns: 1fr; */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-content: center;
   align-items: center;
-  border: solid;
-  gap: 1rem;
-  /* justify-content: center; */
-}
-
-main > * {
+  gap: var(--gap-flex);
 }
 
 .tow-cards-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--gap-flex);
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  /* flex: 1; */
-  padding: 2rem;
-  border-style: solid;
-  border-radius: 1rem;
-  box-shadow: 0px 4px var(--very-dark-blue);
+  padding: var(--gap-flex);
+  border: 1px solid var(--very-light-gray);
+  border-block-start-width: 4px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px var(--grayish-blue, gray);
+  gap: 1rem;
+}
+.card-1 {
+  border-block-start-color: var(--cyan-color, cyan);
+}
+.card-2 {
+  border-block-start-color: var(--red-color, red);
+}
+.card-3 {
+  border-block-start-color: var(--orange-color, orange);
+}
+.card-4 {
+  border-block-start-color: var(--blue-color, blue);
+}
+.subject-text {
+  font-size: 0.85rem;
 }
 .subject-icon {
+  padding-block-start: 1rem;
   align-self: flex-end;
-  width: 100px;
+  max-width: 64px;
 }
